@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     @IBAction func alert1() {
         let alertController = UIAlertController(title: "アラート１", message: "サンプルアラート１です", preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-            self.navigationController?.popViewController(animated: true)
+            alertController.dismiss(animated: true, completion: nil)
         })
         alertController.addAction(action)
         self.present(alertController, animated: true, completion: nil)
@@ -101,6 +101,23 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func commentAlert() {
+        let alert = UIAlertController(title: "コメント", message: "コメントして", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "キャンセル", style: .default) { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }
+        //okした時の処理
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            self.navigationItem.title = alert.textFields?.first?.text
+        }
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        alert.addTextField { (textField) in
+            textField.placeholder = "ここに書いて"
+        }
+        self.present(alert, animated: true, completion: nil)
+    }
     
     
     
