@@ -27,6 +27,8 @@ class ViewController: UIViewController {
             alertController.dismiss(animated: true, completion: nil)
         })
         alertController.addAction(action)
+        //ipadで必須
+        alertController.popoverPresentationController?.sourceView = self.view
         self.present(alertController, animated: true, completion: nil)
     }
     
@@ -41,6 +43,8 @@ class ViewController: UIViewController {
         })
         alert.addAction(okAction)
         alert.addAction(cancelAction)
+        //ipadで必須
+        alert.popoverPresentationController?.sourceView = self.view
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -63,6 +67,8 @@ class ViewController: UIViewController {
             //        ③-2 CANCELボタンの追加
             checkAlertController.addAction(cancelButton)
             
+            //ipadで必須
+            checkAlertController.popoverPresentationController?.sourceView = self.view
             //        ④ アラートの表示
             self.present(checkAlertController,animated: true,completion: nil)
         }
@@ -83,6 +89,8 @@ class ViewController: UIViewController {
             //        ③-2 CANCELボタンの追加
             checkAlertController.addAction(cancelButton)
             
+            //ipadで必須
+            checkAlertController.popoverPresentationController?.sourceView = self.view
             //        ④ アラートの表示
             self.present(checkAlertController,animated: true,completion: nil)
             
@@ -94,9 +102,9 @@ class ViewController: UIViewController {
         
         alertController.addAction(alert1)
         alertController.addAction(alert2)
-        
-        
         alertController.addAction(cancelAction)
+        //ipadで必須
+        alertController.popoverPresentationController?.sourceView = self.view
         self.present(alertController, animated: true, completion: nil)
     }
     
@@ -116,6 +124,8 @@ class ViewController: UIViewController {
         alert.addTextField { (textField) in
             textField.placeholder = "ここに書いて"
         }
+        //ipadで必須
+        alert.popoverPresentationController?.sourceView = self.view
         self.present(alert, animated: true, completion: nil)
     }
     
