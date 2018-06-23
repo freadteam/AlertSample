@@ -29,6 +29,10 @@ class ViewController: UIViewController {
         alertController.addAction(action)
         //ipadで必須
         alertController.popoverPresentationController?.sourceView = self.view
+        let screenSize = UIScreen.main.bounds
+        // ここで表示位置を調整
+        // xは画面中央、yは画面下部になる様に指定
+        alertController.popoverPresentationController?.sourceRect = CGRect(x: screenSize.size.width/2, y: screenSize.size.height, width: 0, height: 0)
         self.present(alertController, animated: true, completion: nil)
     }
     
@@ -45,6 +49,10 @@ class ViewController: UIViewController {
         alert.addAction(cancelAction)
         //ipadで必須
         alert.popoverPresentationController?.sourceView = self.view
+        let screenSize = UIScreen.main.bounds
+        // ここで表示位置を調整
+        // xは画面中央、yは画面下部になる様に指定
+        alert.popoverPresentationController?.sourceRect = CGRect(x: screenSize.size.width/2, y: screenSize.size.height, width: 0, height: 0)
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -69,6 +77,10 @@ class ViewController: UIViewController {
             
             //ipadで必須
             checkAlertController.popoverPresentationController?.sourceView = self.view
+            let screenSize = UIScreen.main.bounds
+            // ここで表示位置を調整
+            // xは画面中央、yは画面下部になる様に指定
+            checkAlertController.popoverPresentationController?.sourceRect = CGRect(x: screenSize.size.width/2, y: screenSize.size.height, width: 0, height: 0)
             //        ④ アラートの表示
             self.present(checkAlertController,animated: true,completion: nil)
         }
@@ -91,6 +103,10 @@ class ViewController: UIViewController {
             
             //ipadで必須
             checkAlertController.popoverPresentationController?.sourceView = self.view
+            let screenSize = UIScreen.main.bounds
+            // ここで表示位置を調整
+            // xは画面中央、yは画面下部になる様に指定
+            checkAlertController.popoverPresentationController?.sourceRect = CGRect(x: screenSize.size.width/2, y: screenSize.size.height, width: 0, height: 0)
             //        ④ アラートの表示
             self.present(checkAlertController,animated: true,completion: nil)
             
@@ -105,6 +121,10 @@ class ViewController: UIViewController {
         alertController.addAction(cancelAction)
         //ipadで必須
         alertController.popoverPresentationController?.sourceView = self.view
+        let screenSize = UIScreen.main.bounds
+        // ここで表示位置を調整
+        // xは画面中央、yは画面下部になる様に指定
+        alertController.popoverPresentationController?.sourceRect = CGRect(x: screenSize.size.width/2, y: screenSize.size.height, width: 0, height: 0)
         self.present(alertController, animated: true, completion: nil)
     }
     
@@ -126,6 +146,10 @@ class ViewController: UIViewController {
         }
         //ipadで必須
         alert.popoverPresentationController?.sourceView = self.view
+        let screenSize = UIScreen.main.bounds
+        // ここで表示位置を調整
+        // xは画面中央、yは画面下部になる様に指定
+        alert.popoverPresentationController?.sourceRect = CGRect(x: screenSize.size.width/2, y: screenSize.size.height, width: 0, height: 0)
         self.present(alert, animated: true, completion: nil)
     }
     
